@@ -33,6 +33,7 @@ def get_recent_sales(occured_after=None):
         usd_price = float(new_sale['payment_token']['usd_price'])
         amount = float(new_sale['total_price']) / 10**decimals
         usd_amount = round(usd_price * amount, 2)
+        print(f"Buzzed Bear #{token_id} just sold for {amount} {currency} (${usd_amount} USD) {opensea_link}")
         post_tweet(token_id, amount, currency, usd_amount, opensea_link)
 
 def post_tweet(token_id, amount, currency, usd_amount, opensea_link):
