@@ -4,7 +4,6 @@ import os
 import time
 import sys
 import calendar
-import json
 from twitter import *
 from dotenv import load_dotenv
 
